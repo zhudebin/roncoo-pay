@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/roncoo-pay.iml" filepath="$PROJECT_DIR$/roncoo-pay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/roncoo-pay-app-notify/roncoo-pay-app-notify.iml" filepath="$PROJECT_DIR$/roncoo-pay-app-notify/roncoo-pay-app-notify.iml" />
+      <module fileurl="file://$PROJECT_DIR$/roncoo-pay-app-reconciliation/roncoo-pay-app-reconciliation.iml" filepath="$PROJECT_DIR$/roncoo-pay-app-reconciliation/roncoo-pay-app-reconciliation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/roncoo-pay-app-settlement/roncoo-pay-app-settlement.iml" filepath="$PROJECT_DIR$/roncoo-pay-app-settlement/roncoo-pay-app-settlement.iml" />
+      <module fileurl="file://$PROJECT_DIR$/roncoo-pay-common-core/roncoo-pay-common-core.iml" filepath="$PROJECT_DIR$/roncoo-pay-common-core/roncoo-pay-common-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/roncoo-pay-service/roncoo-pay-service.iml" filepath="$PROJECT_DIR$/roncoo-pay-service/roncoo-pay-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/roncoo-pay-web-boss/roncoo-pay-web-boss.iml" filepath="$PROJECT_DIR$/roncoo-pay-web-boss/roncoo-pay-web-boss.iml" />
+      <module fileurl="file://$PROJECT_DIR$/roncoo-pay-web-gateway/roncoo-pay-web-gateway.iml" filepath="$PROJECT_DIR$/roncoo-pay-web-gateway/roncoo-pay-web-gateway.iml" />
+    </modules>
+  </component>
+</project>
