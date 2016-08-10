@@ -2,7 +2,7 @@
 /* dbms name:      mysql 5.0                                    */
 /* created on:     2016-6-29 18:28:57   www.roncoo.com          */
 /*==============================================================*/
-
+create database roncoo_mini_pay_dev DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 drop table if exists rp_account;
 
@@ -620,13 +620,14 @@ INSERT INTO seq_table (SEQ_NAME, CURRENT_VALUE, INCREMENT, REMARK) VALUES ('RECO
 /*==============================================================*/
 /* create function                                              */
 /*==============================================================*/
+delimiter $$
 CREATE FUNCTION `FUN_SEQ`(SEQ VARCHAR(50)) RETURNS BIGINT(20)
 BEGIN
      UPDATE SEQ_TABLE
      SET CURRENT_VALUE = CURRENT_VALUE + INCREMENT
      WHERE  SEQ_NAME=SEQ;
      RETURN FUN_SEQ_CURRENT_VALUE(SEQ);
-END;
+END $$
 
 
 CREATE FUNCTION `FUN_SEQ_CURRENT_VALUE`(SEQ VARCHAR(50)) RETURNS BIGINT(20)
@@ -637,7 +638,7 @@ BEGIN
     FROM SEQ_TABLE 
     WHERE SEQ_NAME=SEQ;
     RETURN VALUE;
-END;
+END $$
 
 CREATE FUNCTION `FUN_SEQ_SET_VALUE`(SEQ VARCHAR(50), VALUE INTEGER) RETURNS BIGINT(20)
 BEGIN
@@ -645,13 +646,13 @@ BEGIN
      SET CURRENT_VALUE=VALUE
      WHERE SEQ_NAME=SEQ;
      RETURN FUN_SEQ_CURRENT_VALUE(SEQ);
-END;
+END $$
 
 CREATE FUNCTION  FUN_NOW()
  RETURNS DATETIME
 BEGIN 
 RETURN now();
-END;
+END $$
 
 
 -- 时间函数
@@ -659,9 +660,9 @@ END;
 CREATE FUNCTION `FUN_DATE_ADD`(STR_DATE VARCHAR(10), STR_INTERVAL INTEGER) RETURNS DATE
 BEGIN
      RETURN date_add(STR_DATE, INTERVAL STR_INTERVAL DAY);
-END;
+END $$
 
-
+delimiter ;
 
 
 
